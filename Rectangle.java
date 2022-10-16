@@ -1,6 +1,11 @@
 package com.solid.lsp;
 
 public class Rectangle {
+
+    public void setSide(int side){
+        this.width = side;
+        this.height = side;
+    }
     // DO NOT EDIT THE FILE FROM THIS LINE ONWARD!!
     private int width;
     private int height;
