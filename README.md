@@ -1,1 +1,1 @@
-# SOLID principle: ISP
+# SOLID principle: LSP
