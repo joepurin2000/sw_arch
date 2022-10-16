@@ -1,1 +1,1 @@
-# sw_arch
+# SOLID principle: ISP
