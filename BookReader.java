@@ -1,16 +1,20 @@
 package com.solid.book;
 
-
 import java.lang.reflect.Constructor;
 import java.util.List;
 
-class book_for_reader{
+public interface to_screen{
+    public void printToScreen();
+}
+
+class book_for_reader implements to_screen{
     Book book;
 
     public book_for_reader(Book book){
         this.book = book;
     }
 
+    @Override
     public void printToScreen() {
         do {
             System.out.println(this.book.getCurrentPage());

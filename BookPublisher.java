@@ -6,12 +6,18 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.ListIterator;
 
-class book_for_publisher{
+public interface to_file{
+    public void printToFile();
+}
+
+class book_for_publisher implements to_file{
     Book book;
+    
     public book_for_publisher(Book book){
         this.book = book; 
     }
 
+    @Override
     public void printToFile() {
             // Book book = this;
             boolean isEven = false;
@@ -24,7 +30,7 @@ class book_for_publisher{
                         previousPage = this.book.getCurrentPage();
                         isEven = false;
                     } else {
-                        printWriter.printf("%-25s : %25s%n", previousPage, book.getCurrentPage());
+                        printWriter.printf("%-25s : %25s%n", previousPage, this.book.getCurrentPage());
                         isEven = true;
                     }
                 } while (this.book.turnToNextPage());

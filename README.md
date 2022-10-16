@@ -1,1 +1,1 @@
-# sw_arch
+# SOLID principle: SRP & ISP
