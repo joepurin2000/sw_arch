@@ -14,13 +14,23 @@ TestData.java - a class that contains static data for convenience's sake
 
 Your tasks for this assignment require you to implement the following files:
 JSONBookMetadataFormatter.java - a class to construct from books a string of metadata in JSON format. You need to implement this class.
-BookMetadataExporter.java - a class that to export from all the books in its collection the metadata in one of supported formats. You need to implement this class as well as create its subclasses.
+BookMetadataExporter.java - a class that to export from all the books in its collection the metadata in one of supported formats.
+You need to implement this class as well as create its subclasses.
 
 Your tasks
-The first involves the Builder Pattern. To introduce support for JSON file format, your first task is to implement all the required methods in a class named JSONBookMetadataFormatter as indicated by an interface named BookMetadataFormatter. For references, you may examine both CSVBookMetadataFormatter and XMLBookMetadataFormatter to help you understand how to implement a new formatter.
+The first involves the Builder Pattern. 
+To introduce support for JSON file format,
+your first task is to implement all the required methods in a class named JSONBookMetadataFormatter as indicated by an interface named BookMetadataFormatter. 
+For references, you may examine both CSVBookMetadataFormatter and XMLBookMetadataFormatter to help you understand how to implement a new formatter.
 
-Currently, the code relies on a class named BookMetadataFormatterFactory to create a BookMetadataFormatter object. This approach is often called the "Factory Pattern" where the factory is a class that instantiates objects of various subtypes using if-else or switch. This current approach, however, violates OCP. Imagine that you need to add a support for a new format, such as YAML, the BookMetadataFormatterFactory must be changed to accommodate such an update.
+Currently, the code relies on a class named BookMetadataFormatterFactory to create a BookMetadataFormatter object.
+This approach is often called the "Factory Pattern" where the factory is a class that instantiates objects of various subtypes using if-else or switch.
+This current approach, however, violates OCP. Imagine that you need to add a support for a new format, such as YAML,
+the BookMetadataFormatterFactory must be changed to accommodate such an update.
 
-Your second task is to apply the Factory Method Pattern to fix the issue. Please complete BookMetadataExporter from the skeleton file provided as well as create its appropriate subclasses. In a complete implementation, an object of type BookMetadataExporter should be able to export from all the books in its collection the metadata in one of supported formats. In the finished assignment, the BookMetadataFormatterFactory will be no longer used.
+Your second task is to apply the Factory Method Pattern to fix the issue.
+Please complete BookMetadataExporter from the skeleton file provided as well as create its appropriate subclasses.
+In a complete implementation, an object of type BookMetadataExporter should be able to export from all the books in its collection the metadata in one of supported formats.
+In the finished assignment, the BookMetadataFormatterFactory will be no longer used.
 
 IMPORTANT: Commit your code on GitHub and submit a link to your Java source files.

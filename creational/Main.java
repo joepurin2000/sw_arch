@@ -5,12 +5,18 @@ import java.io.IOException;
 
 public class Main {
 
+    // private static BookMetadataExporter XMLBookMetadataFormatter(){
+        
+    // }
+
     public static void main(String[] args) {
 
         // Current usage
         BookMetadataFormatter formatter = null;
         try {
-            formatter = BookMetadataFormatterFactory.getBookMetadataFormatter(BookMetadataFormatterFactory.Format.CSV);
+            //BookMetadataFormatterFactory will be no longer used.
+            // formatter = BookMetadataFormatterFactory.getBookMetadataFormatter(BookMetadataFormatterFactory.Format.CSV);
+            formatter = BookMetadataFormatterFactory.getBookMetadataFormatter(BookMetadataFormatterFactory.Format.JSON);
             formatter.append(TestData.dragonBook);
             formatter.append(TestData.dinosaurBook);
             System.out.print(formatter.getMetadataString());
@@ -21,9 +27,9 @@ public class Main {
         }
 
         // Expected usage
-//        BookMetadataExporter exporter = new XMLBookMetadataExporter();
-//        exporter.add(TestData.sailboatBook);
-//        exporter.add(TestData.GoFBook);
-//        exporter.export(System.out);
+    //    BookMetadataExporter exporter = new XMLBookMetadataExporter();
+    //    exporter.add(TestData.sailboatBook);
+    //    exporter.add(TestData.GoFBook);
+    //    exporter.export(System.out);
     }
 }
