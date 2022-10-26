@@ -4,8 +4,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class JSONBookMetadataFormatter implements BookMetadataFormatter {
 
@@ -37,8 +35,7 @@ public class JSONBookMetadataFormatter implements BookMetadataFormatter {
         jsonArray.add(jsonObject);
 
         jsonObject = new JSONObject();
-        
-
+    
         return this;
     }
 
