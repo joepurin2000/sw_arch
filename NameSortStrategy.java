@@ -8,7 +8,7 @@ public class NameSortStrategy implements SortStrategy {
     public void customSort(List<Person> people) {
         // YOU ARE NOT ALLOWED TO MODIFY THE CODE ABOVE THIS COMMENT !!
         // YOU MAY ADD UP TO 5 LINES OF CODE BELOW THIS COMMENT !! A LINE OF CODE MAY CONTAIN UP TO ONE SEMI-COLON !!
-
+        java.util.Collections.sort(people, (a, b) -> a.getName().compareToIgnoreCase(b.getName()));
     }
 
 }

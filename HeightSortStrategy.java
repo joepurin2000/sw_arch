@@ -8,7 +8,6 @@ public class HeightSortStrategy implements SortStrategy {
     public void customSort(List<Person> people) {
         // YOU ARE NOT ALLOWED TO MODIFY THE CODE ABOVE THIS COMMENT !!
         // YOU MAY ADD UP TO 5 LINES OF CODE BELOW THIS COMMENT !! A LINE OF CODE MAY CONTAIN UP TO ONE SEMI-COLON !!
-
+        java.util.Collections.sort(people, (p1, p2) -> p1.getHeight() < p2.getHeight() ? -1 : p1.getHeight() == p2.getHeight() ? 0 : 1);
     }
-
 }
