@@ -17,13 +17,8 @@ public class HealthcareWorkerTeam implements HealthcareServiceable{
 
     @Override
     public void service(){
-        // for (HealthcareServiceable healthcareServiceable: this.members) {
-        //     healthcareServiceable.service();
-        // }
-        Iterator<HealthcareServiceable> value = members.iterator();
-        while(value.hasNext()){
-            
-            value.next().service();
+        for (HealthcareServiceable healthcareServiceable: this.members) {
+            healthcareServiceable.service();
         }
     }
 
